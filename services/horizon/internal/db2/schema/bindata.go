@@ -20,6 +20,7 @@
 // migrations/26_exp_history_ledgers.sql (209B)
 // migrations/27_exp_history_transactions.sql (630B)
 // migrations/28_exp_history_operations.sql (439B)
+// migrations/29_exp_history_effects.sql (209B)
 // migrations/2_index_participants_by_toid.sql (277B)
 // migrations/3_use_sequence_in_history_accounts.sql (447B)
 // migrations/4_add_protocol_version.sql (188B)
@@ -492,8 +493,28 @@ func migrations28_exp_history_operationsSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "migrations/28_exp_history_operations.sql", size: 439, mode: os.FileMode(0644), modTime: time.Unix(1576794170, 0)}
+	info := bindataFileInfo{name: "migrations/28_exp_history_operations.sql", size: 439, mode: os.FileMode(0644), modTime: time.Unix(1576857319, 0)}
 	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0x59, 0x2d, 0xc6, 0x70, 0x76, 0x72, 0xc5, 0xb1, 0xc6, 0xe7, 0xa0, 0xb2, 0xfc, 0x78, 0x71, 0xa, 0x43, 0x8e, 0x53, 0x9, 0x19, 0x10, 0xcb, 0x75, 0x3b, 0x66, 0x1, 0x57, 0x43, 0xd2, 0x8e, 0x89}}
+	return a, nil
+}
+
+var _migrations29_exp_history_effectsSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x7c\xce\xb1\xaa\xc2\x30\x14\x87\xf1\xfd\x3c\xc5\x7f\xbc\x17\xe9\x13\x74\xaa\x36\x83\x58\x50\x4a\x9d\x4b\x48\x4e\xeb\x81\x7a\x52\x92\x14\xeb\xdb\x0b\x4e\x62\xc1\xf5\xfb\x2d\x5f\x51\x60\x77\x97\x31\xda\xcc\xb8\xce\x44\x87\xd6\x54\x9d\x41\x57\xed\x1b\x03\x5e\xe7\xfe\x26\x29\x87\xf8\xec\x79\x18\xd8\xe5\x84\x3f\x02\x80\xe6\x78\x32\xf8\xa2\x37\x88\xba\x69\xf1\xa2\x23\x3c\x0f\x76\x99\x36\xd9\x05\x4d\x39\x5a\xd1\x8d\x88\x7a\x5e\x39\xd1\x7f\x49\xf4\xb9\x55\x87\x87\x12\xd5\xed\xf9\xf2\x63\xcb\xd9\xe4\xac\xe7\x92\x5e\x01\x00\x00\xff\xff\xaa\x4f\x70\x26\xd1\x00\x00\x00")
+
+func migrations29_exp_history_effectsSqlBytes() ([]byte, error) {
+	return bindataRead(
+		_migrations29_exp_history_effectsSql,
+		"migrations/29_exp_history_effects.sql",
+	)
+}
+
+func migrations29_exp_history_effectsSql() (*asset, error) {
+	bytes, err := migrations29_exp_history_effectsSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "migrations/29_exp_history_effects.sql", size: 209, mode: os.FileMode(0644), modTime: time.Unix(1577114485, 0)}
+	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0xdf, 0x34, 0xf6, 0x6e, 0x86, 0x85, 0x4e, 0xfb, 0x74, 0xee, 0x7d, 0x4, 0xd2, 0xc7, 0x83, 0xae, 0x97, 0xab, 0xca, 0xe1, 0xb3, 0x7c, 0x25, 0xa8, 0x7f, 0x65, 0x2b, 0x1e, 0xdb, 0x88, 0x9b, 0xf}}
 	return a, nil
 }
 
@@ -788,6 +809,7 @@ var _bindata = map[string]func() (*asset, error){
 	"migrations/26_exp_history_ledgers.sql":                   migrations26_exp_history_ledgersSql,
 	"migrations/27_exp_history_transactions.sql":              migrations27_exp_history_transactionsSql,
 	"migrations/28_exp_history_operations.sql":                migrations28_exp_history_operationsSql,
+	"migrations/29_exp_history_effects.sql":                   migrations29_exp_history_effectsSql,
 	"migrations/2_index_participants_by_toid.sql":             migrations2_index_participants_by_toidSql,
 	"migrations/3_use_sequence_in_history_accounts.sql":       migrations3_use_sequence_in_history_accountsSql,
 	"migrations/4_add_protocol_version.sql":                   migrations4_add_protocol_versionSql,
@@ -861,6 +883,7 @@ var _bintree = &bintree{nil, map[string]*bintree{
 		"26_exp_history_ledgers.sql":                   &bintree{migrations26_exp_history_ledgersSql, map[string]*bintree{}},
 		"27_exp_history_transactions.sql":              &bintree{migrations27_exp_history_transactionsSql, map[string]*bintree{}},
 		"28_exp_history_operations.sql":                &bintree{migrations28_exp_history_operationsSql, map[string]*bintree{}},
+		"29_exp_history_effects.sql":                   &bintree{migrations29_exp_history_effectsSql, map[string]*bintree{}},
 		"2_index_participants_by_toid.sql":             &bintree{migrations2_index_participants_by_toidSql, map[string]*bintree{}},
 		"3_use_sequence_in_history_accounts.sql":       &bintree{migrations3_use_sequence_in_history_accountsSql, map[string]*bintree{}},
 		"4_add_protocol_version.sql":                   &bintree{migrations4_add_protocol_versionSql, map[string]*bintree{}},
